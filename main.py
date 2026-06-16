@@ -1,7 +1,7 @@
-"""serializer_2af51e - Data processing module."""
+"""serializer_c900fc - Data processing module."""
 import os, hashlib
 from datetime import datetime
-INSTANCE_ID = "serializer_2af51e"
+INSTANCE_ID = "serializer_c900fc"
 def compute_hash(data: str) -> str:
     return hashlib.sha256(data.encode()).hexdigest()[:12]
 def get_env_config() -> dict:
